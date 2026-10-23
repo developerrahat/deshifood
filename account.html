@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My account — Deshi Food</title>
+  <meta name="theme-color" content="#0F3B26">
+  <link rel="icon" href="assets/img/logo-mark.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Galada&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/layout.js"></script>
+</head>
+<body data-page="account">
+
+<script>DF.sprite(); DF.topbar(); DF.header('account');</script>
+
+<main data-account>
+
+  <section class="phero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><svg class="ico"><use href="#i-chev-r"/></svg><span aria-current="page">My account</span>
+      </nav>
+      <h1 class="phero__title">My <em>account</em></h1>
+      <p class="phero__sub">Track orders, manage addresses and reorder your favourites.</p>
+    </div>
+  </section>
+
+  <section class="acc">
+    <div class="container acc__grid">
+
+      <!-- ===== Sidebar ===== -->
+      <aside class="acc__side">
+        <div class="acc__profile">
+          <span class="avatar">NJ</span>
+          <div class="acc__who"><b>Nusrat Jahan</b><small>+880 1712-XXXXXX</small></div>
+          <a class="icon-btn" href="#details" aria-label="Edit profile" data-acc-link="details"><svg class="ico"><use href="#i-edit"/></svg></a>
+        </div>
+        <div class="acc__member"><svg class="ico"><use href="#i-award"/></svg>Deshi family member since 2025</div>
+        <nav class="acc__nav" aria-label="Account">
+          <a href="#dashboard" data-acc-link="dashboard"><svg class="ico"><use href="#i-grid"/></svg>Dashboard</a>
+          <a href="#orders" data-acc-link="orders"><svg class="ico"><use href="#i-receipt"/></svg>My orders<span class="acc__count">6</span></a>
+          <a href="#addresses" data-acc-link="addresses"><svg class="ico"><use href="#i-pin"/></svg>Addresses</a>
+          <a href="#details" data-acc-link="details"><svg class="ico"><use href="#i-user"/></svg>Account details</a>
+          <a class="acc__logout" href="login.html"><svg class="ico"><use href="#i-logout"/></svg>Logout</a>
+        </nav>
+        <a class="acc__help" href="https://wa.me/8801842078717" target="_blank" rel="noopener">
+          <span class="acc__help-ico"><svg class="ico"><use href="#i-whatsapp"/></svg></span>
+          <span><b>Need help?</b><small>Chat with us on WhatsApp</small></span>
+        </a>
+      </aside>
+
+      <div class="acc__main">
+
+        <!-- ===== Dashboard ===== -->
+        <section class="acc__panel" data-acc-panel="dashboard">
+          <div class="acc-welcome">
+            <div>
+              <span class="eyebrow eyebrow--gold"><svg class="ico"><use href="#i-leaf"/></svg>Welcome back</span>
+              <h2>Assalamu alaikum, <em>Nusrat</em></h2>
+              <p>Your last order is being packed fresh in our Natore kitchen.</p>
+            </div>
+            <a class="btn btn--gold" href="shop.html">Shop again <svg class="ico"><use href="#i-arrow-r"/></svg></a>
+          </div>
+
+          <ul class="acc-stats">
+            <li><span class="acc-stats__ico"><svg class="ico"><use href="#i-receipt"/></svg></span><div><b>6</b><small>Total orders</small></div></li>
+            <li><span class="acc-stats__ico acc-stats__ico--gold"><svg class="ico"><use href="#i-truck"/></svg></span><div><b>1</b><small>In progress</small></div></li>
+            <li><span class="acc-stats__ico"><svg class="ico"><use href="#i-cash"/></svg></span><div><b>৳6,840</b><small>Total spent</small></div></li>
+            <li><span class="acc-stats__ico acc-stats__ico--gold"><svg class="ico"><use href="#i-gift"/></svg></span><div><b>৳620</b><small>Saved with bundles</small></div></li>
+          </ul>
+
+          <div class="acc-card">
+            <div class="acc-card__head">
+              <div>
+                <h3>Active order <span class="acc-id">#DF-24518</span></h3>
+                <p>Placed 24 Oct 2026 · 3 items · ৳810 · Cash on delivery</p>
+              </div>
+              <span class="status status--gold">Packing</span>
+            </div>
+            <div class="track">
+              <div class="track__items">
+                <span class="track__img" data-pack="mustard-oil"></span>
+                <span class="track__img" data-pack="turmeric"></span>
+                <span class="track__img" data-pack="chili"></span>
+              </div>
+              <ol class="track__steps">
+                <li class="is-done"><span><svg class="ico"><use href="#i-check"/></svg></span><b>Placed</b><small>24 Oct, 2:45 PM</small></li>
+                <li class="is-done"><span><svg class="ico"><use href="#i-check"/></svg></span><b>Confirmed</b><small>24 Oct, 3:10 PM</small></li>
+                <li class="is-current"><span><svg class="ico"><use href="#i-package"/></svg></span><b>Packing</b><small>In progress</small></li>
+                <li><span><svg class="ico"><use href="#i-truck"/></svg></span><b>On the way</b><small>Expected 25 Oct</small></li>
+                <li><span><svg class="ico"><use href="#i-home"/></svg></span><b>Delivered</b><small>—</small></li>
+              </ol>
+            </div>
+            <div class="acc-card__foot">
+              <a class="btn btn--outline btn--sm" href="#orders" data-acc-link="orders">View order details</a>
+              <a class="btn btn--wa btn--sm" href="https://wa.me/8801842078717?text=Hi%20Deshi%20Food!%20About%20order%20%23DF-24518" target="_blank" rel="noopener"><svg class="ico"><use href="#i-whatsapp"/></svg>Ask on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="acc-card">
+            <div class="acc-card__head">
+              <h3>Recent orders</h3>
+              <a class="link-arrow" href="#orders" data-acc-link="orders">View all <svg class="ico"><use href="#i-arrow-r"/></svg></a>
+            </div>
+            <div class="otable">
+              <div class="otable__row otable__row--head"><span>Order</span><span>Items</span><span>Total</span><span>Status</span><span></span></div>
+              <div class="otable__row">
+                <span class="otable__id"><b>#DF-24518</b><small>24 Oct 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="mustard-oil"></i><i data-pack="turmeric"></i><i data-pack="chili"></i></span>
+                <span class="otable__total">৳810</span>
+                <span><em class="status status--gold">Packing</em></span>
+                <a class="otable__go" href="#orders" data-acc-link="orders" aria-label="View order DF-24518"><svg class="ico"><use href="#i-chev-r"/></svg></a>
+              </div>
+              <div class="otable__row">
+                <span class="otable__id"><b>#DF-23960</b><small>02 Oct 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="ghee"></i><i data-pack="honey"></i></span>
+                <span class="otable__total">৳1,500</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="otable__go" href="#orders" data-acc-link="orders" aria-label="View order DF-23960"><svg class="ico"><use href="#i-chev-r"/></svg></a>
+              </div>
+              <div class="otable__row">
+                <span class="otable__id"><b>#DF-23412</b><small>11 Sep 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="health-mix"></i><i data-pack="red-atta"></i><i data-pack="dates"></i></span>
+                <span class="otable__total">৳1,165</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="otable__go" href="#orders" data-acc-link="orders" aria-label="View order DF-23412"><svg class="ico"><use href="#i-chev-r"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-card">
+            <div class="acc-card__head">
+              <div><h3>Buy it again</h3><p>Your favourites, one tap away.</p></div>
+              <a class="link-arrow" href="shop.html">Shop all <svg class="ico"><use href="#i-arrow-r"/></svg></a>
+            </div>
+            <div class="pgrid acc-picks" data-picks="mustard-oil,ghee,honey,health-mix"></div>
+          </div>
+        </section>
+
+        <!-- ===== Orders ===== -->
+        <section class="acc__panel" data-acc-panel="orders" hidden>
+          <div class="acc-card">
+            <div class="acc-card__head">
+              <div><h3>My orders</h3><p>6 orders since you joined.</p></div>
+              <div class="ofilter" role="group" aria-label="Filter orders">
+                <button class="is-active" type="button" data-order-filter="all">All</button>
+                <button type="button" data-order-filter="progress">In progress</button>
+                <button type="button" data-order-filter="delivered">Delivered</button>
+                <button type="button" data-order-filter="cancelled">Cancelled</button>
+              </div>
+            </div>
+            <div class="otable otable--full">
+              <div class="otable__row otable__row--head"><span>Order</span><span>Items</span><span>Payment</span><span>Total</span><span>Status</span><span></span></div>
+              <div class="otable__row" data-order-status="progress">
+                <span class="otable__id"><b>#DF-24518</b><small>24 Oct 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="mustard-oil"></i><i data-pack="turmeric"></i><i data-pack="chili"></i></span>
+                <span class="otable__pay">Cash on delivery</span>
+                <span class="otable__total">৳810</span>
+                <span><em class="status status--gold">Packing</em></span>
+                <a class="btn btn--outline btn--sm" href="thank-you.html">Track</a>
+              </div>
+              <div class="otable__row" data-order-status="delivered">
+                <span class="otable__id"><b>#DF-23960</b><small>02 Oct 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="ghee"></i><i data-pack="honey"></i></span>
+                <span class="otable__pay">bKash</span>
+                <span class="otable__total">৳1,500</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="btn btn--outline btn--sm" href="checkout.html"><svg class="ico"><use href="#i-refresh"/></svg>Reorder</a>
+              </div>
+              <div class="otable__row" data-order-status="delivered">
+                <span class="otable__id"><b>#DF-23412</b><small>11 Sep 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="health-mix"></i><i data-pack="red-atta"></i><i data-pack="dates"></i></span>
+                <span class="otable__pay">Cash on delivery</span>
+                <span class="otable__total">৳1,165</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="btn btn--outline btn--sm" href="checkout.html"><svg class="ico"><use href="#i-refresh"/></svg>Reorder</a>
+              </div>
+              <div class="otable__row" data-order-status="cancelled">
+                <span class="otable__id"><b>#DF-22987</b><small>19 Aug 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="mango-pickle"></i></span>
+                <span class="otable__pay">Cash on delivery</span>
+                <span class="otable__total">৳340</span>
+                <span><em class="status status--red">Cancelled</em></span>
+                <a class="btn btn--outline btn--sm" href="checkout.html"><svg class="ico"><use href="#i-refresh"/></svg>Reorder</a>
+              </div>
+              <div class="otable__row" data-order-status="delivered">
+                <span class="otable__id"><b>#DF-22541</b><small>30 Jul 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="mustard-oil"></i><i data-pack="ghee"></i></span>
+                <span class="otable__pay">Nagad</span>
+                <span class="otable__total">৳1,290</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="btn btn--outline btn--sm" href="checkout.html"><svg class="ico"><use href="#i-refresh"/></svg>Reorder</a>
+              </div>
+              <div class="otable__row" data-order-status="delivered">
+                <span class="otable__id"><b>#DF-21876</b><small>08 Jul 2026</small></span>
+                <span class="otable__thumbs"><i data-pack="honey"></i><i data-pack="mixed-nuts"></i></span>
+                <span class="otable__pay">Cash on delivery</span>
+                <span class="otable__total">৳1,135</span>
+                <span><em class="status status--green">Delivered</em></span>
+                <a class="btn btn--outline btn--sm" href="checkout.html"><svg class="ico"><use href="#i-refresh"/></svg>Reorder</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Addresses ===== -->
+        <section class="acc__panel" data-acc-panel="addresses" hidden>
+          <div class="acc-card">
+            <div class="acc-card__head">
+              <div><h3>Saved addresses</h3><p>Choose a default for faster checkout.</p></div>
+            </div>
+            <div class="addr-grid">
+              <article class="addr is-default">
+                <div class="addr__top"><span class="addr__tag"><svg class="ico"><use href="#i-home"/></svg>Home</span><span class="status status--green">Default</span></div>
+                <b>Nusrat Jahan</b>
+                <p>House 12, Road 5, Dhanmondi<br>Dhaka 1205</p>
+                <p class="addr__phone"><svg class="ico"><use href="#i-phone"/></svg>+880 1712-XXXXXX</p>
+                <div class="addr__actions"><button class="link-btn" type="button">Edit</button><button class="link-btn" type="button">Remove</button></div>
+              </article>
+              <article class="addr">
+                <div class="addr__top"><span class="addr__tag"><svg class="ico"><use href="#i-package"/></svg>Office</span></div>
+                <b>Nusrat Jahan</b>
+                <p>Level 6, Plot 15, Gulshan Avenue<br>Dhaka 1212</p>
+                <p class="addr__phone"><svg class="ico"><use href="#i-phone"/></svg>+880 1712-XXXXXX</p>
+                <div class="addr__actions"><button class="link-btn" type="button">Set as default</button><button class="link-btn" type="button">Edit</button></div>
+              </article>
+              <button class="addr addr--new" type="button">
+                <span class="addr__plus"><svg class="ico"><use href="#i-plus"/></svg></span>
+                <b>Add new address</b>
+                <small>Home, office or family</small>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== Details ===== -->
+        <section class="acc__panel" data-acc-panel="details" hidden>
+          <form class="acc-card" action="#" onsubmit="return false">
+            <div class="acc-card__head"><div><h3>Account details</h3><p>Keep your contact details up to date.</p></div></div>
+            <div class="ck-fields">
+              <div class="field">
+                <label class="field__label" for="ac-name">Full name</label>
+                <div class="field__control"><svg class="ico"><use href="#i-user"/></svg><input id="ac-name" type="text" value="Nusrat Jahan" autocomplete="name"></div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="ac-phone">Phone number</label>
+                <div class="field__control"><span class="field__prefix">+880</span><input id="ac-phone" type="tel" value="1712-XXXXXX" autocomplete="tel-national"></div>
+              </div>
+              <div class="field field--full">
+                <label class="field__label" for="ac-email">Email <small>Optional</small></label>
+                <div class="field__control"><svg class="ico"><use href="#i-mail"/></svg><input id="ac-email" type="email" placeholder="you@email.com" autocomplete="email"></div>
+              </div>
+            </div>
+            <div class="acc-card__foot"><button class="btn btn--green" type="submit">Save changes</button></div>
+          </form>
+
+          <form class="acc-card" action="#" onsubmit="return false">
+            <div class="acc-card__head"><div><h3>Change password</h3><p>Use at least 6 characters.</p></div></div>
+            <div class="ck-fields">
+              <div class="field field--full">
+                <label class="field__label" for="ac-pw">Current password</label>
+                <div class="field__control"><svg class="ico"><use href="#i-lock"/></svg><input id="ac-pw" type="password" autocomplete="current-password"><button class="field__btn" type="button" aria-label="Show password" data-pw-toggle><svg class="ico"><use href="#i-eye"/></svg></button></div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="ac-pw2">New password</label>
+                <div class="field__control"><svg class="ico"><use href="#i-lock"/></svg><input id="ac-pw2" type="password" autocomplete="new-password"></div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="ac-pw3">Confirm new password</label>
+                <div class="field__control"><svg class="ico"><use href="#i-lock"/></svg><input id="ac-pw3" type="password" autocomplete="new-password"></div>
+              </div>
+            </div>
+            <div class="acc-card__foot"><button class="btn btn--outline-green" type="submit">Update password</button></div>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>DF.footer(); DF.mobileNav('account'); DF.overlays();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

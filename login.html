@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login or register — Deshi Food</title>
+  <meta name="theme-color" content="#0F3B26">
+  <link rel="icon" href="assets/img/logo-mark.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Galada&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/layout.js"></script>
+</head>
+<body data-page="login">
+
+<script>DF.sprite(); DF.topbar(); DF.header();</script>
+
+<main class="auth" data-auth data-mode="login">
+  <div class="container auth__grid">
+
+    <aside class="auth__brand">
+      <img class="auth__photo" src="assets/img/hero-products.jpg" alt="" width="608" height="604">
+      <div class="auth__brand-inner">
+        <span class="eyebrow eyebrow--gold"><svg class="ico"><use href="#i-leaf"/></svg>Deshi Food family</span>
+        <h2 class="auth__headline">Pure food, <em>one tap away</em></h2>
+        <p class="auth__bn bn">খাঁটি পণ্য, সুস্থ জীবনের জন্য।</p>
+        <ul class="auth__perks">
+          <li><span><svg class="ico"><use href="#i-zap"/></svg></span><div><b>Faster checkout</b><small>Your phone and address, saved</small></div></li>
+          <li><span><svg class="ico"><use href="#i-package"/></svg></span><div><b>Track every order</b><small>Live status from packing to delivery</small></div></li>
+          <li><span><svg class="ico"><use href="#i-gift"/></svg></span><div><b>Member bundle deals</b><small>Extra savings on combos</small></div></li>
+          <li><span><svg class="ico"><use href="#i-refresh"/></svg></span><div><b>One-tap reorder</b><small>Buy your favourites again</small></div></li>
+        </ul>
+        <div class="auth__proof">
+          <b>22K+</b>
+          <span>families follow Deshi Food on Facebook</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="auth__panel">
+      <div class="auth__card">
+        <div class="auth__switch" role="tablist" aria-label="Login or register">
+          <span class="auth__pill" aria-hidden="true"></span>
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">Login</button>
+          <button type="button" role="tab" aria-selected="false" data-auth-tab="register">Register</button>
+        </div>
+
+        <!-- Login -->
+        <form class="auth__form" action="account.html" data-auth-form="login">
+          <h1 class="auth__title">Welcome back</h1>
+          <p class="auth__lead">Login to track orders and check out faster.</p>
+
+          <div class="field">
+            <label class="field__label" for="lg-id">Phone or email</label>
+            <div class="field__control">
+              <svg class="ico"><use href="#i-user"/></svg>
+              <input id="lg-id" type="text" placeholder="01XXX-XXXXXX or you@email.com" autocomplete="username" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="lg-pw">Password <a href="#" class="auth__link">Forgot password?</a></label>
+            <div class="field__control">
+              <svg class="ico"><use href="#i-lock"/></svg>
+              <input id="lg-pw" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+              <button class="field__btn" type="button" aria-label="Show password" data-pw-toggle><svg class="ico"><use href="#i-eye"/></svg></button>
+            </div>
+          </div>
+          <label class="check"><input type="checkbox" checked><span class="check__box"><svg class="ico"><use href="#i-check"/></svg></span>Keep me logged in</label>
+
+          <button class="btn btn--green btn--block btn--lg" type="submit">Login <svg class="ico"><use href="#i-arrow-r"/></svg></button>
+
+          <div class="auth__or"><span>or continue with</span></div>
+          <div class="auth__social">
+            <a class="btn btn--outline" href="account.html"><svg class="ico"><use href="#i-google"/></svg>Google</a>
+            <a class="btn btn--outline" href="account.html"><svg class="ico auth__wa"><use href="#i-whatsapp"/></svg>WhatsApp OTP</a>
+          </div>
+          <p class="auth__alt">New to Deshi Food? <a href="#register" data-auth-go="register">Create an account</a></p>
+        </form>
+
+        <!-- Register -->
+        <form class="auth__form" action="account.html" data-auth-form="register" hidden>
+          <h1 class="auth__title">Create your account</h1>
+          <p class="auth__lead">It takes less than a minute — no email needed.</p>
+
+          <div class="field">
+            <label class="field__label" for="rg-name">Full name</label>
+            <div class="field__control">
+              <svg class="ico"><use href="#i-user"/></svg>
+              <input id="rg-name" type="text" placeholder="e.g. Nusrat Jahan" autocomplete="name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="rg-phone">Phone number</label>
+            <div class="field__control">
+              <span class="field__prefix">+880</span>
+              <input id="rg-phone" type="tel" inputmode="tel" placeholder="1XXX-XXXXXX" autocomplete="tel-national" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="rg-email">Email <small>Optional</small></label>
+            <div class="field__control">
+              <svg class="ico"><use href="#i-mail"/></svg>
+              <input id="rg-email" type="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="rg-pw">Password</label>
+            <div class="field__control">
+              <svg class="ico"><use href="#i-lock"/></svg>
+              <input id="rg-pw" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required>
+              <button class="field__btn" type="button" aria-label="Show password" data-pw-toggle><svg class="ico"><use href="#i-eye"/></svg></button>
+            </div>
+          </div>
+          <label class="check"><input type="checkbox" required><span class="check__box"><svg class="ico"><use href="#i-check"/></svg></span>I agree to the <a href="#" class="auth__link">Terms</a> &amp; <a href="#" class="auth__link">Privacy Policy</a></label>
+
+          <button class="btn btn--green btn--block btn--lg" type="submit">Create account <svg class="ico"><use href="#i-arrow-r"/></svg></button>
+
+          <div class="auth__or"><span>or sign up with</span></div>
+          <div class="auth__social">
+            <a class="btn btn--outline" href="account.html"><svg class="ico"><use href="#i-google"/></svg>Google</a>
+            <a class="btn btn--outline" href="account.html"><svg class="ico auth__wa"><use href="#i-whatsapp"/></svg>WhatsApp OTP</a>
+          </div>
+          <p class="auth__alt">Already have an account? <a href="#login" data-auth-go="login">Login</a></p>
+        </form>
+      </div>
+      <p class="auth__secure"><svg class="ico"><use href="#i-lock"/></svg>Your details are safe with us — we never share your number.</p>
+    </div>
+  </div>
+</main>
+
+<script>DF.footer(); DF.mobileNav('account'); DF.overlays();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

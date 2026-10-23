@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Deshi Food</title>
+  <meta name="description" content="Shop pure mustard oil, gawa ghee, raw honey, freshly ground spices, pickles and healthy staples from Deshi Food.">
+  <meta name="theme-color" content="#0F3B26">
+  <link rel="icon" href="assets/img/logo-mark.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Galada&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/layout.js"></script>
+</head>
+<body data-page="shop">
+
+<script>DF.sprite(); DF.topbar(); DF.header('shop');</script>
+
+<main data-shop>
+
+  <!-- ===== Page header ===== -->
+  <section class="phero phero--shop">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><svg class="ico"><use href="#i-chev-r"/></svg><span aria-current="page">Shop</span>
+      </nav>
+      <div class="phero__row">
+        <div>
+          <h1 class="phero__title">Shop the <em>pantry</em></h1>
+          <p class="phero__sub">Pure mustard oil, gawa ghee, raw honey, freshly ground spices and wholesome staples — straight from Natore.</p>
+        </div>
+        <ul class="phero__stats">
+          <li><b>17</b>Products</li>
+          <li><b>6</b>Categories</li>
+          <li><b>100%</b>Pure</li>
+        </ul>
+      </div>
+      <div class="catpills" role="group" aria-label="Quick categories">
+        <button class="catpill is-active" type="button" data-cat="all"><span class="catpill__ico"><svg class="ico"><use href="#i-grid"/></svg></span>All products</button>
+        <button class="catpill" type="button" data-cat="spices"><span class="catpill__ico"><svg class="ico"><use href="#c-spice"/></svg></span>Spices</button>
+        <button class="catpill" type="button" data-cat="oil"><span class="catpill__ico"><svg class="ico"><use href="#c-oil"/></svg></span>Oil &amp; Ghee</button>
+        <button class="catpill" type="button" data-cat="honey"><span class="catpill__ico"><svg class="ico"><use href="#c-honey"/></svg></span>Honey</button>
+        <button class="catpill" type="button" data-cat="pickles"><span class="catpill__ico"><svg class="ico"><use href="#c-jar"/></svg></span>Pickles</button>
+        <button class="catpill" type="button" data-cat="grains"><span class="catpill__ico"><svg class="ico"><use href="#c-grain"/></svg></span>Rice &amp; Grains</button>
+        <button class="catpill" type="button" data-cat="nuts"><span class="catpill__ico"><svg class="ico"><use href="#c-nut"/></svg></span>Nuts &amp; Dates</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Catalogue ===== -->
+  <section class="shop">
+    <div class="container shop__layout">
+
+      <aside class="filters" data-filters aria-label="Filters">
+        <div class="filters__head">
+          <h2><svg class="ico"><use href="#i-filter"/></svg>Filters</h2>
+          <button class="link-btn" type="button" data-reset>Reset all</button>
+          <button class="icon-btn filters__close" type="button" aria-label="Close filters" data-close-drawer><svg class="ico"><use href="#i-x"/></svg></button>
+        </div>
+
+        <div class="filters__body">
+          <div class="field__control fsearch">
+            <svg class="ico"><use href="#i-search"/></svg>
+            <input type="search" placeholder="Search in shop…" aria-label="Search products" data-f-q>
+          </div>
+
+          <details class="fgroup" open>
+            <summary>Categories <svg class="ico"><use href="#i-chev-d"/></svg></summary>
+            <div class="fgroup__body" data-f-cats></div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Price range <svg class="ico"><use href="#i-chev-d"/></svg></summary>
+            <div class="fgroup__body">
+              <div class="range" style="--lo:0%;--hi:100%">
+                <div class="range__track"><span class="range__fill"></span></div>
+                <input type="range" min="0" max="1500" step="10" value="0" aria-label="Minimum price" data-range-min>
+                <input type="range" min="0" max="1500" step="10" value="1500" aria-label="Maximum price" data-range-max>
+              </div>
+              <div class="range__values">
+                <span data-price-lo>৳0</span><i>to</i><span data-price-hi>৳1,500+</span>
+              </div>
+              <div class="presets">
+                <button type="button" data-preset="0-200">Under ৳200</button>
+                <button type="button" data-preset="200-500">৳200 – ৳500</button>
+                <button type="button" data-preset="500-1500">৳500+</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Pack size <svg class="ico"><use href="#i-chev-d"/></svg></summary>
+            <div class="fgroup__body fchips" data-f-sizes></div>
+          </details>
+
+          <details class="fgroup" open>
+            <summary>Offers <svg class="ico"><use href="#i-chev-d"/></svg></summary>
+            <div class="fgroup__body">
+              <label class="switch">
+                <input type="checkbox" data-f-sale>
+                <span class="switch__track"></span>
+                <span class="switch__label"><b>On sale</b><small>Products with a discount</small></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" data-f-new>
+                <span class="switch__track"></span>
+                <span class="switch__label"><b>New arrivals</b><small>Just added to the pantry</small></span>
+              </label>
+            </div>
+          </details>
+
+          <a class="fpromo" href="index.html#bundle">
+            <span class="fpromo__ico"><svg class="ico"><use href="#i-gift"/></svg></span>
+            <b>Bundle &amp; Save</b>
+            <p>Pick any 4 products and save 15% — applied automatically.</p>
+            <span class="fpromo__link">Build a bundle <svg class="ico"><use href="#i-arrow-r"/></svg></span>
+          </a>
+        </div>
+
+        <div class="filters__foot">
+          <button class="btn btn--green btn--block btn--lg" type="button" data-close-drawer><span>Show <b data-count>17</b> products</span></button>
+        </div>
+      </aside>
+
+      <div class="shop__main">
+        <div class="toolbar">
+          <button class="toolbar__filter" type="button" data-open-filters>
+            <svg class="ico"><use href="#i-filter"/></svg>Filters<span class="toolbar__badge" data-filter-count hidden></span>
+          </button>
+          <p class="toolbar__count">Showing <b data-count>17</b> of <span data-total>17</span> products</p>
+          <div class="toolbar__right">
+            <label class="select">
+              <span>Sort by</span>
+              <select data-sort aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="discount">Biggest discount</option>
+                <option value="name">Name: A – Z</option>
+              </select>
+              <svg class="ico"><use href="#i-chev-d"/></svg>
+            </label>
+            <div class="viewtoggle" role="group" aria-label="Grid density">
+              <button type="button" data-view="3" aria-label="3 per row"><svg class="ico"><use href="#i-cols3"/></svg></button>
+              <button class="is-active" type="button" data-view="4" aria-label="4 per row"><svg class="ico"><use href="#i-cols4"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="active-filters" data-active></div>
+
+        <div class="pgrid pgrid--shop" data-shop-grid></div>
+
+        <nav class="pager" aria-label="Pagination">
+          <a class="pager__btn is-disabled" href="#" aria-disabled="true"><svg class="ico"><use href="#i-chev-l"/></svg>Prev</a>
+          <a class="is-active" href="#" aria-current="page">1</a>
+          <a href="#">2</a>
+          <a class="pager__btn" href="#">Next<svg class="ico"><use href="#i-chev-r"/></svg></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service strip ===== -->
+  <section class="section section--white section--tight">
+    <div class="container">
+      <ul class="perks">
+        <li class="perk"><span class="perk__icon"><svg class="ico"><use href="#i-truck"/></svg></span><span><b>Free Home Delivery</b><small>On orders over ৳1,000</small></span></li>
+        <li class="perk"><span class="perk__icon"><svg class="ico"><use href="#i-shield"/></svg></span><span><b>100% Pure &amp; Natural</b><small>No chemicals, no adulteration</small></span></li>
+        <li class="perk"><span class="perk__icon"><svg class="ico"><use href="#i-cash"/></svg></span><span><b>Cash on Delivery</b><small>Pay when your order arrives</small></span></li>
+        <li class="perk"><span class="perk__icon"><svg class="ico"><use href="#i-clock"/></svg></span><span><b>Always Open</b><small>Order any time on WhatsApp</small></span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<script>DF.footer(); DF.mobileNav('shop'); DF.overlays();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

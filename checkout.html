@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Deshi Food</title>
+  <meta name="theme-color" content="#0F3B26">
+  <link rel="icon" href="assets/img/logo-mark.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Galada&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/layout.js"></script>
+</head>
+<body class="is-checkout" data-page="checkout">
+
+<script>DF.sprite(); DF.checkoutHeader();</script>
+
+<main class="ck">
+  <div class="container">
+
+    <div class="ck__intro">
+      <a class="link-arrow ck__back" href="shop.html"><svg class="ico"><use href="#i-arrow-l"/></svg>Continue shopping</a>
+      <h1>Checkout</h1>
+      <p>No account needed — just tell us where to deliver. <span class="bn">মাত্র ৩টি তথ্য দিয়ে অর্ডার করুন।</span></p>
+    </div>
+
+    <form class="ck__grid" action="thank-you.html" method="get" data-checkout data-subtotal="750">
+      <div class="ck__main">
+
+        <section class="ck-card">
+          <header class="ck-card__head">
+            <span class="ck-num">1</span>
+            <div><h2>Delivery details</h2><p>We'll call this number to confirm your order.</p></div>
+          </header>
+          <div class="ck-fields">
+            <div class="field">
+              <label class="field__label" for="ck-name">Full name <span class="req">*</span></label>
+              <div class="field__control">
+                <svg class="ico"><use href="#i-user"/></svg>
+                <input id="ck-name" name="name" type="text" placeholder="e.g. Nusrat Jahan" autocomplete="name" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="ck-phone">Phone number <span class="req">*</span></label>
+              <div class="field__control">
+                <span class="field__prefix">+880</span>
+                <input id="ck-phone" name="phone" type="tel" inputmode="tel" placeholder="1XXX-XXXXXX" autocomplete="tel-national" required>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="ck-address">Full address <span class="req">*</span></label>
+              <div class="field__control field__control--area">
+                <svg class="ico"><use href="#i-pin"/></svg>
+                <textarea id="ck-address" name="address" rows="3" placeholder="House, road, area, thana, district" autocomplete="street-address" required></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ck-card">
+          <header class="ck-card__head">
+            <span class="ck-num">2</span>
+            <div><h2>Delivery area</h2><p>Choose where we're delivering to.</p></div>
+          </header>
+          <div class="opts opts--2">
+            <label class="opt">
+              <input type="radio" name="area" value="dhaka" data-fee="60" checked>
+              <span class="opt__radio"></span>
+              <span class="opt__body"><b>Inside Dhaka</b><small>Delivered in 1–2 days</small></span>
+              <span class="opt__price">৳60</span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="area" value="outside" data-fee="120">
+              <span class="opt__radio"></span>
+              <span class="opt__body"><b>Outside Dhaka</b><small>Delivered in 2–4 days</small></span>
+              <span class="opt__price">৳120</span>
+            </label>
+          </div>
+          <p class="ck-note"><svg class="ico"><use href="#i-gift"/></svg><span>Add <b>৳250</b> more to your order for <b>free delivery</b>.</span></p>
+        </section>
+
+        <section class="ck-card">
+          <header class="ck-card__head">
+            <span class="ck-num">3</span>
+            <div><h2>Payment method</h2><p>Pay on delivery, or pay now with mobile banking.</p></div>
+          </header>
+          <div class="opts opts--3">
+            <label class="opt opt--pay">
+              <input type="radio" name="pay" value="cod" checked>
+              <span class="opt__radio"></span>
+              <span class="opt__logo opt__logo--cod"><svg class="ico"><use href="#i-cash"/></svg></span>
+              <span class="opt__body"><b>Cash on delivery</b><small>Pay when it arrives</small></span>
+            </label>
+            <label class="opt opt--pay">
+              <input type="radio" name="pay" value="bkash">
+              <span class="opt__radio"></span>
+              <span class="opt__logo opt__logo--bkash">bKash</span>
+              <span class="opt__body"><b>bKash</b><small>Pay instantly</small></span>
+            </label>
+            <label class="opt opt--pay">
+              <input type="radio" name="pay" value="nagad">
+              <span class="opt__radio"></span>
+              <span class="opt__logo opt__logo--nagad">Nagad</span>
+              <span class="opt__body"><b>Nagad</b><small>Pay instantly</small></span>
+            </label>
+          </div>
+          <details class="ck-extra">
+            <summary><svg class="ico"><use href="#i-edit"/></svg>Add an order note <span>(optional)</span></summary>
+            <div class="field__control field__control--area">
+              <textarea name="note" rows="3" placeholder="Any special instructions for delivery…"></textarea>
+            </div>
+          </details>
+        </section>
+      </div>
+
+      <aside class="ck-summary">
+        <div class="ck-summary__card">
+          <header class="ck-summary__head">
+            <h2>Order summary</h2>
+            <a href="shop.html">Edit</a>
+          </header>
+          <ul class="ck-items">
+            <li>
+              <span class="ck-items__img" data-pack="mustard-oil"></span>
+              <div><b>Pure Mustard Oil</b><small>1 L · Qty 1</small></div>
+              <strong>৳380</strong>
+            </li>
+            <li>
+              <span class="ck-items__img" data-pack="turmeric"></span>
+              <div><b>Turmeric Powder</b><small>200 g · Qty 1</small></div>
+              <strong>৳180</strong>
+            </li>
+            <li>
+              <span class="ck-items__img" data-pack="chili"></span>
+              <div><b>Red Chili Powder</b><small>200 g · Qty 1</small></div>
+              <strong>৳190</strong>
+            </li>
+          </ul>
+
+          <div class="coupon">
+            <div class="field__control">
+              <svg class="ico"><use href="#i-tag"/></svg>
+              <input type="text" placeholder="Coupon code" aria-label="Coupon code" data-coupon>
+            </div>
+            <button class="btn btn--green" type="button" data-coupon-apply>Apply</button>
+          </div>
+          <p class="coupon__ok" data-coupon-ok hidden><svg class="ico"><use href="#i-check"/></svg>Coupon applied — you saved ৳50</p>
+
+          <dl class="ck-lines">
+            <div><dt>Subtotal</dt><dd>৳750</dd></div>
+            <div><dt>Delivery</dt><dd data-ck-ship>৳60</dd></div>
+            <div class="is-disc" data-ck-disc-row hidden><dt>Coupon</dt><dd data-ck-disc>−৳50</dd></div>
+          </dl>
+          <div class="ck-total"><span>Total</span><strong data-ck-total>৳810</strong></div>
+
+          <button class="btn btn--gold btn--block btn--lg ck-place" type="submit"><svg class="ico"><use href="#i-lock"/></svg>Place order · <span data-ck-total>৳810</span></button>
+          <p class="ck-terms">By placing your order you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.</p>
+
+          <ul class="ck-trust">
+            <li><svg class="ico"><use href="#i-shield"/></svg>100% pure</li>
+            <li><svg class="ico"><use href="#i-cash"/></svg>Pay on delivery</li>
+            <li><svg class="ico"><use href="#i-refresh"/></svg>Easy returns</li>
+          </ul>
+        </div>
+
+        <a class="ck-help" href="https://wa.me/8801842078717" target="_blank" rel="noopener">
+          <span class="ck-help__ico"><svg class="ico"><use href="#i-whatsapp"/></svg></span>
+          <span><b>Prefer to order by chat?</b><small>Send your order on WhatsApp</small></span>
+          <svg class="ico ck-help__go"><use href="#i-arrow-r"/></svg>
+        </a>
+      </aside>
+    </form>
+  </div>
+</main>
+
+<script>DF.miniFooter();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
