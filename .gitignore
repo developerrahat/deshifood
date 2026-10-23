@@ -1,0 +1,11 @@
+# Source material used while designing — not part of the site
+facebook-images/
+Ref-UI/
+
+# Local tooling
+.claude/
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
